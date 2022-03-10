@@ -1,0 +1,36 @@
+@use "../base/variables.scss";
+@use "../base/mixin";
+
+.footer{
+    background-color: variables.$primario;
+    text-align: center;
+    .footer-contenido{
+        padding: 5rem;
+        background-color: variables.$blanco;
+        @include mixin.tablet{ 
+            @include mixin.grid(3, 2rem); 
+        }
+    }
+    .copyright{
+        text-align: center;
+        color: variables.$blanco;
+        margin: 0;
+        padding: 2rem 4rem;
+    }
+}
+.footer-box{
+    font-family: variables.$fuenteCursiva;
+    margin-bottom: 5rem;
+    @include mixin.tablet{ 
+        margin-bottom: 0;
+    }
+    h3{
+        font-family: variables.$fuenteCursiva;
+        margin: 0 0 1rem 0;
+        font-size: 2.4rem;
+        color: variables.$secundario;
+    }
+    p, a{
+        font-size: 2rem;
+    }
+}

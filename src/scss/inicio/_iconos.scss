@@ -1,0 +1,23 @@
+@use "../base/variables.scss" as v;
+@use  "../base/mixin";
+.iconos{
+    margin-top: 5rem;
+    .listado-iconos{
+        
+        @include mixin.tablet{ 
+            @include mixin.grid(3, 3rem);
+        }
+        li{
+            img{
+                margin: 0 auto;
+                width: 12rem;
+            }
+            p{
+                font-family: v.$fuenteCursiva;
+                font-size: 3.2rem;
+                color: v.$primario;
+            }
+        }
+    }
+
+}

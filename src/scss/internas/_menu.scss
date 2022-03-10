@@ -1,0 +1,26 @@
+@use "../base/variables";
+@use "../base/mixin";
+
+.padding-bottom-0{
+    padding-bottom: 0;
+}
+.contenido-menu{
+    background-image: url(../img/cafe.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
+    overflow: hidden;
+    aspect-ratio: 3/8;
+    @include mixin.telefono{
+        aspect-ratio: 3/4;
+    }
+    @include mixin.tablet{   
+        @include mixin.grid(2, 5rem);
+        aspect-ratio: 16/6;
+        background-size: 40%;
+        background-position: bottom right;
+    }
+    .texto{
+        font-size: 1.5rem;
+    }
+}

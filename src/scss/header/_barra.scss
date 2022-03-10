@@ -1,0 +1,25 @@
+@use "../base/mixin";
+
+.barra{
+    display: flex;
+    flex-direction: column;
+    @include mixin.tablet{ 
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo{
+        width: 50%;
+        margin: 0 auto;
+        @include mixin.tablet{ 
+            width: 20rem;
+            margin:0
+            
+        }
+    }
+    a{
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+}

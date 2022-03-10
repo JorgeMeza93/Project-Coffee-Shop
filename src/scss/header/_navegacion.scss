@@ -1,0 +1,31 @@
+@use "../base/mixin";
+@use "../base/variables.scss";
+
+.nav-principal{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    @include mixin.tablet{ 
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    a{
+        text-align: center;
+        color: variables.$blanco;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        @include mixin.tablet{ 
+            margin-bottom: 0;
+        }
+        &:hover{
+            color: variables.$secundario;
+        }
+        &.activo{
+            color: variables.$secundario;
+        }       
+    }
+}
+
